@@ -1,7 +1,7 @@
 from argparse import Namespace
 from argparse import ArgumentParser
-import re
 import math
+import re
 
 
 def hex_to_rgb(hex: str) -> tuple[int, int, int]:
