@@ -10,8 +10,10 @@ The closer the alpha is to `0` the more prominent the background will be in the 
 
 The closer the alpha is to `1` the more prominent the background will be in the resulting color 
 
+*NOTE:* `#` is interpreted as a comment so we need to wrap the input in quotes
+
 ```sh
-$ python colorblender.py #ffffff #000000 0.1
+$ python colorblender.py '#ffffff' '#000000' 0.1
 #1a1a1a
 ```
 
