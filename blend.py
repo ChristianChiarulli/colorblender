@@ -1,8 +1,6 @@
 from argparse import Namespace
 from argparse import ArgumentParser
 import re
-
-
 import math
 
 
