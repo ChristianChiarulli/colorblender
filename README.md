@@ -2,6 +2,8 @@
 
 A python script to blend hex colors
 
+![demo](./assets/demo.png) 
+
 ## Usage
 
 Accepts two hex colors and an alpha in the following order:
