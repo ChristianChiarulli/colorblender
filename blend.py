@@ -30,7 +30,7 @@ def blend(hex_fg: str, hex_bg: str, alpha: float) -> str:
     return rgb_to_hex((blend_channel(0), blend_channel(1), blend_channel(2)))
 
 
-def validate_hex(input: str) -> bool:
+def valid_hex(input: str) -> bool:
     regex = "^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
 
     pattern: re.Pattern[str] = re.compile(regex)
@@ -48,11 +48,17 @@ if __name__ == "__main__":
     parser.add_argument("alpha", help="alpha", type=float)
     args: Namespace = parser.parse_args()
 
-    if args.alpha < 0 or args.alpha > 1:
+    fg = args.fg
+    bg = args.bg
+    alpha = args.alpha
+
+    if not valid_hex(fg):
+        exit(f"invalid foreground hex color: {fg}")
+
+    if not valid_hex(bg):
+        exit(f"invalid background hex color: {bg}")
+
+    if alpha < 0 or alpha > 1:
         exit("alpha must be between 0 and 1")
 
-    if validate_hex(args.fg) and validate_hex(args.bg):
-        print(blend(args.fg, args.bg, args.alpha))
-    else:
-        print("invalid hex color")
-        exit(1)
+    print(blend(fg, bg, alpha))
