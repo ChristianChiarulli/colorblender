@@ -12,7 +12,7 @@ foreground background alpha
 
 The closer the alpha is to `0` the more prominent the background will be in the resulting color 
 
-The closer the alpha is to `1` the more prominent the background will be in the resulting color 
+The closer the alpha is to `1` the more prominent the foreground will be in the resulting color 
 
 *NOTE:* `#` is interpreted as a comment so we need to wrap the input in quotes
 
