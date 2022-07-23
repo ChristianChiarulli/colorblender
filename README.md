@@ -4,7 +4,11 @@ A python script to blend hex colors
 
 ## Usage
 
-Accepts two hex colors and an alpha
+Accepts two hex colors and an alpha in the following order:
+
+```
+foreground background alpha
+```
 
 The closer the alpha is to `0` the more prominent the background will be in the resulting color 
 
