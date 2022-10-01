@@ -1,5 +1,5 @@
 # colorblender.py
-
+![banner](./assets/banner.png)
 A python script to blend hex colors
 
 ![demo](./assets/demo.png) 
